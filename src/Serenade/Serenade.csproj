@@ -64,7 +64,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Calling Native Methods\NativeMethods.cs" />
-    <Compile Include="ConsoleDo\ConsoleDo.cs" />
+    <Compile Include="Console Methods\setConsole.cs" />
+    <Compile Include="Hook\Hook.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

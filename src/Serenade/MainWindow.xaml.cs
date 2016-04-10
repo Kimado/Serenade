@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Serenade.ConsoleDo;
 
 namespace Serenade
 {
@@ -26,9 +25,9 @@ namespace Serenade
             InitializeComponent();
 
             // Calling AllocConsole(); from NativeMethods.cs 
-            Serenade.Calling_Native_Methods.NativeMethods.AllocConsole();
-            ConsoleDo.ConsoleDo.Write(ConsoleColor.Green, "Hello");
-            Console.WriteLine("Hello");
+            Calling_Native_Methods.NativeMethods.AllocConsole();
+            ConsoleMethods.setConsole.Write(ConsoleColor.Green, "Serenade Initialized...");
+            ConsoleMethods.setConsole.Write(ConsoleColor.Yellow, "Please, run your game in borderless or windowed mode.");
         }
     }
 }
