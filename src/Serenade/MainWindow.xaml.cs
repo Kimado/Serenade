@@ -23,6 +23,10 @@ namespace Serenade
         public MainWindow()
         {
             InitializeComponent();
+
+            // Calling AllocConsole(); 
+            Serenade.Calling_Native_Methods.NativeMethods.AllocConsole();
+            
         }
     }
 }
