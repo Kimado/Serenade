@@ -24,11 +24,8 @@ namespace Serenade
         {
             InitializeComponent();
 
-            //hi
-            // lol 
-
-            //hello, test 2
-
+            // Calling AllocConsole(); from NativeMethods.cs 
+            Serenade.Calling_Native_Methods.NativeMethods.AllocConsole();
         }
     }
 }
