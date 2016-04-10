@@ -23,11 +23,6 @@ namespace Serenade
         public MainWindow()
         {
             InitializeComponent();
-
-            //test
-
-            //hello, test 2
-
         }
     }
 }
