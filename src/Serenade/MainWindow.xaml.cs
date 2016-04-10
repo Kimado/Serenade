@@ -24,10 +24,7 @@ namespace Serenade
         {
             InitializeComponent();
 
-
-
-
-            //anjdhajhsdahd
+            //test
 
         }
     }
