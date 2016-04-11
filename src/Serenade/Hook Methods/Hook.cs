@@ -1,9 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Interop;
+using System.Windows.Media;
 namespace Serenade.HookMethods
 {
     class Hook
@@ -39,7 +41,6 @@ namespace Serenade.HookMethods
                 ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "\"Call of duty 4\" Process id: " + pID + "...");
 
             // Handle the Process and Get Read Permissions.
-            // public static extern IntPtr OpenProcess(uint dwDesiredAccess, [MarshalAs(UnmanagedType.Bool)] bool bInheritHandle, int dwProcessId);
             GameProcessHandle = Calling_Native_Methods.NativeMethods.OpenProcess(Calling_Native_Methods.NativeMethods.PROCESS_VM_READ, false, pID);
 
             // Handle the Process and Get Read Permissions.
@@ -47,10 +48,31 @@ namespace Serenade.HookMethods
                 ConsoleMethods.setConsole.WriteLine(ConsoleColor.Red, "Ooops!? Couldn't recieve read permission of the process: " + pID + "!");
                 ConsoleMethods.setConsole.WriteLine(ConsoleColor.Yellow, "Please, make sure that you aren't running your game in administrator mode...");
             }
-                
             else
                 ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "\"Call of duty 4\" Read permission: True...");
 
+            WindowInformation();
+        }
+        // width height x y 
+        public static readonly int[] ScreenCenter = new int[2];
+        public static readonly int[] WindowPosition = new int[2];
+        public static readonly int[] Resolution = new int[2];
+        public static void WindowInformation()
+        {
+            Rectangle trueRect = Serenade.Memory_and_Array.Utilities.GetTrueClientRect(Serenade.HookMethods.Hook.GameWindowHandle);
+            ScreenCenter[0] = trueRect.Width / 2; ScreenCenter[1] = trueRect.Height / 2;
+            WindowPosition[0] = trueRect.X; WindowPosition[1] = trueRect.Y;
+            Resolution[0] = trueRect.Width; Resolution[1] = trueRect.Height;
+
+            string WindowWidth = trueRect.Width.ToString();
+            string WindowHeight = trueRect.Height.ToString();
+    
+            ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "\"Call of duty 4\" Window size: " + WindowWidth + " x " + WindowHeight);
+        }
+
+        public static void draw()
+        {
+           // Box1 = new TextBlock { FontSize = 10, Foreground = new SolidColorBrush(System.Drawing.Color.FromArgb(0x7F, 0xFF, 0xFF, 0xFF)) };
         }
     }
 }
