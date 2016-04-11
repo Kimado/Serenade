@@ -57,7 +57,7 @@ namespace Serenade.ConsoleMethods
             Write(ConsoleColor.Yellow, "[ " + DateTime.Now + "] - " +  "Waiting for call of duty 4... ");
 
             // Ok Uh, it a simple FindWindow searching method combined with a console loop. Nothing really complex. 
-            while ((Hook.Hook.GameWindowHandle = Calling_Native_Methods.NativeMethods.FindWindow(null, "Call of Duty 4")) == IntPtr.Zero)
+            while ((HookMethods.Hook.GameWindowHandle = Calling_Native_Methods.NativeMethods.FindWindow(null, "Call of Duty 4")) == IntPtr.Zero)
             {
                 /* Kinda pointless to comment dis no? */ 
                 Write(ConsoleColor.Yellow, "/");

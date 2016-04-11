@@ -32,7 +32,7 @@ namespace Serenade
             ConsoleMethods.setConsole.WriteLine(ConsoleColor.Yellow, "Please, run your game in borderless or windowed mode.");
 
             // Hook call of duty 4 game window. 
-            Serenade.Hook.Hook.HookWindow();
+            HookMethods.Hook.HookWindow();
         }
     }
 }
