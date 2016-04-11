@@ -26,8 +26,13 @@ namespace Serenade
 
             // Calling AllocConsole(); from NativeMethods.cs 
             Calling_Native_Methods.NativeMethods.AllocConsole();
-            ConsoleMethods.setConsole.Write(ConsoleColor.Green, "Serenade Initialized...");
-            ConsoleMethods.setConsole.Write(ConsoleColor.Yellow, "Please, run your game in borderless or windowed mode.");
+
+            // If the build has been executed correctly show up welcome message.
+            ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "Serenade Initialized...");
+            ConsoleMethods.setConsole.WriteLine(ConsoleColor.Yellow, "Please, run your game in borderless or windowed mode.");
+
+            // Hook call of duty 4 game window. 
+            Serenade.Hook.Hook.HookWindow();
         }
     }
 }
