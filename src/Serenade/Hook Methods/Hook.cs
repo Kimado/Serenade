@@ -14,7 +14,7 @@ namespace Serenade.HookMethods
         {
             // Simple Hook Functions...
             ConsoleMethods.setConsole.hookloop();
-
+                
             // Next step will be to get the process ID from the game and a read permissions.
             // Wait me before starting (: 
         }
