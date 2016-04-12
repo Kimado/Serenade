@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Serenade
+namespace CoDExtHack
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -28,7 +28,7 @@ namespace Serenade
             Calling_Native_Methods.NativeMethods.AllocConsole();
 
             // If the build has been executed correctly show up welcome message.
-            ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "Serenade Initialized...");
+            ConsoleMethods.setConsole.WriteLine(ConsoleColor.Green, "CoD Ext Hack Initialized...");
             ConsoleMethods.setConsole.WriteLine(ConsoleColor.Yellow, "Please, run your game in borderless or windowed mode.");
 
             // Hook call of duty 4 game window. 
