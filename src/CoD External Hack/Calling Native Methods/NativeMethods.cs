@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
-namespace Serenade.Calling_Native_Methods
+namespace CoDExtHack.Calling_Native_Methods
 {
     class NativeMethods
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Serenade.Memory_and_Array
+namespace CoDExtHack.Memory_and_Array
 {
     class Utilities
     {

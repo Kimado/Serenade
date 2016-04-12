@@ -7,7 +7,7 @@ using System.Globalization;
 
 
 // Changed the console folder to ConsoleMethods\ so we know where stuff are.
-namespace Serenade.ConsoleMethods
+namespace CoDExtHack.ConsoleMethods
 {
     // I also switched ConsoleDo to setConsole because it more professional
     // and wrote 2 write function ( writeline and write ) because both method are different. 

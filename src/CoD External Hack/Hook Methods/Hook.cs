@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
-namespace Serenade.HookMethods
+namespace CoDExtHack.HookMethods
 {
     class Hook
     {
@@ -59,7 +59,7 @@ namespace Serenade.HookMethods
         public static readonly int[] Resolution = new int[2];
         public static void WindowInformation()
         {
-            Rectangle trueRect = Serenade.Memory_and_Array.Utilities.GetTrueClientRect(Serenade.HookMethods.Hook.GameWindowHandle);
+            Rectangle trueRect = CoDExtHack.Memory_and_Array.Utilities.GetTrueClientRect(CoDExtHack.HookMethods.Hook.GameWindowHandle);
             ScreenCenter[0] = trueRect.Width / 2; ScreenCenter[1] = trueRect.Height / 2;
             WindowPosition[0] = trueRect.X; WindowPosition[1] = trueRect.Y;
             Resolution[0] = trueRect.Width; Resolution[1] = trueRect.Height;
